@@ -9,6 +9,7 @@ $(document).ready(function() {
 		itemsMobile :[479,1],
 		pagination:true
 	});
+
 	$("#home-slider").owlCarousel({
 		items:1,
 		itemsDesktop : [1000,1], //5 items between 1000px and 901px
@@ -32,8 +33,8 @@ $(document).ready(function() {
         $('.navbar').removeClass('gradient-violat');
         $("#scroll-top-div").fadeOut('500');
     }
-	var num = 50; //number of pixels before modifying styles
 
+	var num = 50; //number of pixels before modifying styles
 	$(window).bind('scroll', function () {
 	    if ($(window).scrollTop() > num) {
 	        $('.navbar').addClass('colored-nav');
@@ -45,7 +46,6 @@ $(document).ready(function() {
 	        $("#scroll-top-div").fadeOut('500');
 	    }
 	});
-
 
 
 	/* SMOOTH SCROLLING SCRIPT*/
