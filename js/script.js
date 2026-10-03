@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+	// OWL CAROUSEL INSTALLATION
+	$("#home-slider").owlCarousel({
+		singleItem:true,
+		autoPlay:6000,
+		stopOnHover:true,
+		pagination:true,
+		navigation:true,
+		navigationText:["<i class='ion-ios-arrow-left'></i>","<i class='ion-ios-arrow-right'></i>"]
+	});
+
 	/* Navigation Menu*/
 	var offsettop = $('.navbar').offset().top;
 	if (offsettop > 50) {

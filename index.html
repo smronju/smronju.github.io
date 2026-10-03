@@ -13,12 +13,25 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
       .hero-name{font-size:44px;}
       .hero-title{font-size:20px;opacity:.9;}
       .hero-location{margin-top:10px;opacity:.8;}
       .hero-location i{margin-right:6px;}
+      .hero-slide{min-height:520px;display:flex;align-items:center;justify-content:center;padding:60px 60px 70px;}
+      .hero-slide > .row{width:100%;display:flex;align-items:center;flex-wrap:wrap;}
+      .slide-kicker{text-transform:uppercase;letter-spacing:2px;font-size:13px;opacity:.8;margin-bottom:8px;}
+      .slide-text h2{font-size:48px;margin-top:0;}
+      .slide-media{text-align:center;}
+      .slide-media img{max-height:420px;max-width:100%;filter:drop-shadow(0 20px 40px rgba(0,0,0,.35));}
+      .slide-media img.logo-art{max-height:400px;filter:none;}
+      .slide-media img.rounded-card{border-radius:18px;}
+      .home-slider .owl-pagination{position:absolute;top:235px;left:0;right:0;}
+      @media (max-width:767px){.home-slider .owl-pagination{display:none;}}
+      @media (max-width:767px){.hero-slide{min-height:0;padding:40px 30px 60px;}.slide-text{text-align:center;}.slide-text h2{font-size:36px;}}
       .experience-item{border-left:3px solid #ff7f50;padding:0 0 30px 25px;position:relative;}
       .experience-item:before{content:"";position:absolute;left:-9px;top:4px;width:15px;height:15px;border-radius:50%;background:#7b4397;}
       .experience-item:last-child{padding-bottom:0;}
@@ -78,16 +91,58 @@
       </nav>
     </header>
 
-    <section id="introduction" class="gradient-violat padding-top-bottom-120">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center padding-top-90">
-            <h1 class="cta-heading text-white hero-name">Mohammad Shoriful Islam Ronju</h1>
-            <p class="text-white hero-title">Full Stack PHP Developer &mdash; PHP / Laravel / JavaScript / React / Vue / HTML / CSS</p>
-            <p class="text-white hero-location"><i class="ion-ios-location-outline"></i>Dhaka, Bangladesh</p>
-            <div class="cta-btn-group">
-              <a class="btn btn-orange border-none btn-rounded-corner" href="https://www.linkedin.com/in/smronju/" target="_blank" rel="noopener">LinkedIn <span class="icon-on-button"><i class="ion-social-linkedin"></i></span></a>
-              <a class="btn btn-white border-none btn-rounded-corner" href="https://github.com/smronju" target="_blank" rel="noopener">GitHub <span class="icon-on-button"><i class="ion-social-github"></i></span></a>
+    <section id="introduction" class="gradient-violat padding-top-90 home-slider">
+      <div id="home-slider" class="owl-carousel">
+        <div>
+          <div class="container hero-slide">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <h1 class="cta-heading text-white hero-name">Mohammad Shoriful Islam Ronju</h1>
+                <p class="text-white hero-title">Full Stack PHP Developer &mdash; PHP / Laravel / JavaScript / React / Vue / HTML / CSS</p>
+                <p class="text-white hero-location"><i class="ion-ios-location-outline"></i>Dhaka, Bangladesh</p>
+                <div class="cta-btn-group">
+                  <a class="btn btn-orange border-none btn-rounded-corner" href="https://www.linkedin.com/in/smronju/" target="_blank" rel="noopener">LinkedIn <span class="icon-on-button"><i class="ion-social-linkedin"></i></span></a>
+                  <a class="btn btn-white border-none btn-rounded-corner" href="https://github.com/smronju" target="_blank" rel="noopener">GitHub <span class="icon-on-button"><i class="ion-social-github"></i></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="container hero-slide">
+            <div class="row">
+              <div class="col-md-6 col-sm-7 slide-text">
+                <p class="slide-kicker text-white">My apps &middot; Android</p>
+                <h2 class="cta-heading text-white">IOU</h2>
+                <p class="text-white slider-para">Every IOU, never forgotten. A private ledger for money you lend and borrow, with repayments, reminders, proof attachments and reports, all kept on your phone.</p>
+                <div class="cta-btn-group">
+                  <a class="btn btn-orange border-none btn-rounded-corner" href="https://iou.haaturey.com" target="_blank" rel="noopener">Visit website <span class="icon-on-button"><i class="ion-ios-arrow-thin-right"></i></span></a>
+                  <a class="btn btn-white border-none btn-rounded-corner" href="privacy-iou.html">Privacy policy <span class="icon-on-button"><i class="ion-ios-locked-outline"></i></span></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-5 slide-media sm-display-none">
+                <img class="rounded-card" src="images/apps/iou-slide.png" alt="IOU app screenshot showing lent and borrowed balances">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="container hero-slide">
+            <div class="row">
+              <div class="col-md-6 col-sm-7 slide-text">
+                <p class="slide-kicker text-white">My apps &middot; Android game</p>
+                <h2 class="cta-heading text-white">LightUp</h2>
+                <p class="text-white slider-para">A neon circuit puzzle. Rotate hexagonal tiles to connect the battery to the bulb, with a daily puzzle, endless levels, achievements and Google Play Games leaderboards.</p>
+                <div class="cta-btn-group">
+                  <a class="btn btn-orange border-none btn-rounded-corner" href="#apps">Learn more <span class="icon-on-button"><i class="ion-ios-arrow-thin-right"></i></span></a>
+                  <a class="btn btn-white border-none btn-rounded-corner" href="privacy-lightup.html">Privacy policy <span class="icon-on-button"><i class="ion-ios-locked-outline"></i></span></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-5 slide-media sm-display-none">
+                <img class="logo-art" src="images/apps/lightup-logo.png" alt="LightUp logo">
+              </div>
             </div>
           </div>
         </div>
@@ -348,6 +403,7 @@
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </body>
