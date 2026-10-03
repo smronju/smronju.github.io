@@ -29,6 +29,19 @@
       .experience-item li{margin-bottom:6px;}
       .skill-group{margin-bottom:30px;}
       .skill-tag{display:inline-block;margin:0 6px 10px 0;padding:6px 14px;border-radius:20px;background:#f3eef8;color:#5a2d82;font-size:13px;font-weight:600;}
+      .app-card{background:#fff;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.08);padding:30px;margin-bottom:30px;height:calc(100% - 30px);}
+      .app-card-header{display:flex;align-items:center;margin-bottom:18px;}
+      .app-card-header img{width:72px;height:72px;border-radius:16px;margin-right:18px;flex-shrink:0;}
+      .app-card-header h4{margin:0 0 4px;}
+      .app-card-header p{margin:0;color:#888;}
+      .app-card ul{padding-left:18px;margin-bottom:18px;}
+      .app-card li{margin-bottom:6px;}
+      .app-card .skill-tag{font-size:12px;padding:4px 12px;}
+      .app-links{margin-top:10px;}
+      .app-links a{margin-right:18px;font-weight:600;}
+      .app-links i{margin-right:4px;}
+      .row-eq{display:flex;flex-wrap:wrap;}
+      .row-eq > [class*="col-"]{display:flex;flex-direction:column;}
       .contact-links a{display:inline-block;margin:0 10px 10px;}
       .contact-links i{margin-right:6px;}
     </style>
@@ -53,6 +66,7 @@
             <ul class="nav navbar-nav  navbar-right">
               <li class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
               <li><a href="#about">About</a></li>
+              <li><a href="#apps">Apps</a></li>
               <li><a href="#experience">Experience</a></li>
               <li><a href="#skills">Skills</a></li>
               <li><a href="#education">Education</a></li>
@@ -123,7 +137,63 @@
       </div>
     </section>
 
-    <section id="experience" class="padding-top-bottom-90" style="background:#fafafa">
+    <section id="apps" class="padding-top-bottom-90" style="background:#fafafa">
+      <div class="container">
+        <div class="heading-wraper text-center margin-bottom-80">
+          <h4>my apps</h4>
+          <hr class="heading-devider gradient-orange">
+        </div>
+        <div class="row row-eq">
+          <div class="col-md-6">
+            <div class="app-card">
+              <div class="app-card-header">
+                <img src="images/apps/iou.png" alt="IOU app icon">
+                <div>
+                  <h4>IOU</h4>
+                  <p>Every IOU, never forgotten. &middot; Android</p>
+                </div>
+              </div>
+              <p>A private ledger for money you lend to and borrow from friends and family. Log who, how much and when it&rsquo;s due, attach a photo or voice note as proof, and watch balances update as repayments come in. All data stays on your phone.</p>
+              <ul>
+                <li>Lent and borrowed tracked separately, with Open, Partial, Overdue and Settled statuses</li>
+                <li>Repayment timeline, per-person balances and reports with charts</li>
+                <li>Daily overdue reminders, biometric sign-in and CSV export/import</li>
+                <li>English &amp; Bangla, BDT &amp; USD, multiple themes</li>
+              </ul>
+              <p><span class="skill-tag">Laravel</span><span class="skill-tag">NativePHP Mobile</span><span class="skill-tag">SQLite</span><span class="skill-tag">AdMob</span></p>
+              <div class="app-links">
+                <a href="https://iou.haaturey.com" target="_blank" rel="noopener"><i class="ion-ios-world-outline"></i>Website</a>
+                <a href="privacy-iou.html"><i class="ion-ios-locked-outline"></i>Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="app-card">
+              <div class="app-card-header">
+                <img src="images/apps/lightup.png" alt="LightUp game icon">
+                <div>
+                  <h4>LightUp</h4>
+                  <p>Circuit puzzle game &middot; Android</p>
+                </div>
+              </div>
+              <p>A neon circuit-board puzzle game. Tap hexagonal tiles to rotate them and connect the battery to the bulb. When the path closes, the circuit lights up.</p>
+              <ul>
+                <li>50 hand-tuned levels, then endless always-solvable generated levels</li>
+                <li>Daily puzzle with streaks and a shareable result</li>
+                <li>Star ratings, hints, achievements and Google Play Games leaderboards</li>
+                <li>Many color themes and tile skins, sound effects and haptics</li>
+              </ul>
+              <p><span class="skill-tag">Kotlin</span><span class="skill-tag">Jetpack Compose</span><span class="skill-tag">Play Games Services</span><span class="skill-tag">AdMob</span></p>
+              <div class="app-links">
+                <a href="privacy-lightup.html"><i class="ion-ios-locked-outline"></i>Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="padding-top-bottom-90">
       <div class="container">
         <div class="heading-wraper text-center margin-bottom-80">
           <h4>experience</h4>
@@ -186,7 +256,7 @@
       </div>
     </section>
 
-    <section id="skills" class="padding-top-bottom-90">
+    <section id="skills" class="padding-top-bottom-90" style="background:#fafafa">
       <div class="container">
         <div class="heading-wraper text-center margin-bottom-80">
           <h4>skills</h4>
@@ -217,7 +287,7 @@
       </div>
     </section>
 
-    <section id="education" class="padding-top-bottom-90" style="background:#fafafa">
+    <section id="education" class="padding-top-bottom-90">
       <div class="container">
         <div class="heading-wraper text-center margin-bottom-80">
           <h4>education</h4>
